@@ -23,8 +23,8 @@ export const APP_CONFIG = {
 
   social: {
     instagram: "https://instagram.com/jerseyvault_mid", // ← Actualizar
-    facebook: "https://jerseyvault.netlify.app/404", // ← Actualizar
-    tiktok: "https://jerseyvault.netlify.app/404", // ← Actualizar
+    facebook: "https://jerseyvaultstore.netlify.app/404", // ← Actualizar
+    tiktok: "https://jerseyvaultstore.netlify.app/404", // ← Actualizar
   },
 
   catalog: {

@@ -1,11 +1,6 @@
-[[redirects]]
-  from = "/img-proxy/*"
-  to = "https://photo.yupoo.com/:splat"
-  status = 200
-  force = true
-
-  [redirects.headers]
-    Referer = "https://x.yupoo.com/"
+[[edge_functions]]
+  path = "/img-proxy/*"
+  function = "img-proxy"
 
 [[redirects]]
   from = "/*"
