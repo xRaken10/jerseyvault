@@ -5,10 +5,22 @@ export default function HeroEditorial() {
     <section className="relative w-full h-[100svh] flex flex-col items-center justify-center overflow-hidden">
       {/* GPU-Friendly Gradients (No blur, no blend modes) */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-[60vw] h-[60vw] animate-pulse" 
-             style={{ animationDuration: '8s', background: 'radial-gradient(circle, rgba(229,231,235,0.35) 0%, rgba(255,255,255,0) 70%)' }} />
-        <div className="absolute bottom-1/4 right-1/4 w-[50vw] h-[50vw] animate-pulse" 
-             style={{ animationDuration: '12s', background: 'radial-gradient(circle, rgba(243,244,246,0.4) 0%, rgba(255,255,255,0) 70%)' }} />
+        <div
+          className="absolute top-1/4 left-1/4 w-[60vw] h-[60vw] animate-pulse"
+          style={{
+            animationDuration: "8s",
+            background:
+              "radial-gradient(circle, rgba(229,231,235,0.35) 0%, rgba(255,255,255,0) 70%)",
+          }}
+        />
+        <div
+          className="absolute bottom-1/4 right-1/4 w-[50vw] h-[50vw] animate-pulse"
+          style={{
+            animationDuration: "12s",
+            background:
+              "radial-gradient(circle, rgba(243,244,246,0.4) 0%, rgba(255,255,255,0) 70%)",
+          }}
+        />
       </div>
 
       <div className="z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center">
@@ -36,17 +48,20 @@ export default function HeroEditorial() {
           transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
           className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl mx-auto font-medium leading-relaxed"
         >
-          Un archivo interactivo curado para contemplar el diseño, la historia y la evolución de las piezas más icónicas del fútbol mundial.
+          Un archivo creado para contemplar el diseño de los uniformes de los
+          equipos favoritos de los fanáticos del fútbol mundial
         </motion.p>
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-[9px] uppercase tracking-widest font-bold text-gray-400">Descubrir</span>
+        <span className="text-[9px] uppercase tracking-widest font-bold text-gray-400">
+          Descubrir
+        </span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-gray-300 to-transparent dark:from-gray-700 dark:to-transparent" />
       </motion.div>
     </section>
