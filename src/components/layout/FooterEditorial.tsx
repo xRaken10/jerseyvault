@@ -11,7 +11,7 @@ export default function FooterEditorial() {
     >
       <div className="max-w-4xl mx-auto text-center">
         <p className="text-[10px] md:text-xs text-gray-400 dark:text-gray-500 font-medium tracking-wide uppercase leading-relaxed">
-          JerseyVault es un proyecto independiente dedicado exclusivamente a la documentación y exploración visual de la historia y el diseño de camisetas de fútbol.
+          Archivo Deportivo es un proyecto independiente dedicado exclusivamente a la documentación y exploración visual de la historia y el diseño de camisetas de fútbol.
           <br className="hidden md:block" />
           Todas las marcas, nombres comerciales, escudos y logotipos pertenecen a sus respectivos propietarios.
           <br className="hidden md:block" />

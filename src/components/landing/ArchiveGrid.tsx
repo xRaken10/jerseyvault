@@ -4,6 +4,7 @@ import { getProducts, getLigas } from "../../services/catalog.service";
 import type { Product, Liga } from "../../types/product";
 import PieceCard from "./PieceCard";
 import PieceModal from "./PieceModal";
+import { SelectMenu } from "../ui/SelectMenu";
 import { Search, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const ITEMS_PER_PAGE = 40;
@@ -93,15 +94,14 @@ export default function ArchiveGrid() {
             )}
           </div>
 
-          {/* Liga Filter */}
-          <select 
-            value={activeLiga}
-            onChange={(e) => setActiveLiga(e.target.value as Liga | "Todas")}
-            className="bg-transparent text-sm font-bold tracking-wide uppercase border-b border-gray-300 dark:border-gray-700 pb-1 cursor-pointer focus:outline-none"
-          >
-            <option value="Todas">Todas las Ligas</option>
-            {ligas.map(l => <option key={l} value={l}>{l}</option>)}
-          </select>
+          {/* Custom Premium Liga Filter */}
+          <div className="w-full sm:w-48 relative z-[60]">
+            <SelectMenu 
+              value={activeLiga === "Todas" ? "Todas las Ligas" : activeLiga}
+              options={["Todas las Ligas", ...ligas]}
+              onChange={(val) => setActiveLiga(val === "Todas las Ligas" ? "Todas" : val as Liga)}
+            />
+          </div>
         </div>
       </div>
 

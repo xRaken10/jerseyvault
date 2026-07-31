@@ -42,10 +42,10 @@ export default function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center gap-3 transition-opacity hover:opacity-70"
         >
-          <img src={logoLight} alt="JerseyVault" className="h-6 w-auto dark:hidden" />
-          <img src={logoDark} alt="JerseyVault" className="h-6 w-auto hidden dark:block" />
+          <img src={logoLight} alt="Archivo Deportivo" className="h-6 w-auto dark:hidden" />
+          <img src={logoDark} alt="Archivo Deportivo" className="h-6 w-auto hidden dark:block" />
           <span className="text-lg font-bold tracking-tight text-black dark:text-white">
-            JerseyVault
+            Archivo Deportivo
           </span>
         </button>
 
