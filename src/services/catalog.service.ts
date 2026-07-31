@@ -1,12 +1,12 @@
 import type { Product, Liga } from '../types/product';
-import type { CatalogFilters } from '../types/catalog';
 
 // Cache to store the dynamically loaded JSON and prevent multiple network requests
 let catalogCache: Product[] | null = null;
 
 export async function getProducts(): Promise<Product[]> {
   if (catalogCache) return catalogCache;
-  const { default: data } = await import('../data/catalog.json');
+  const res = await fetch('/catalog.json');
+  const data = await res.json();
   catalogCache = data.products as Product[];
   return catalogCache;
 }
@@ -35,20 +35,4 @@ export async function getEquiposByLiga(liga: Liga): Promise<string[]> {
   return Array.from(equipos).sort();
 }
 
-export function filterProducts(products: Product[], filters: CatalogFilters): Product[] {
-  return products.filter(p => {
-    if (filters.liga && p.liga !== filters.liga) return false;
-    if (filters.equipo && p.equipo !== filters.equipo) return false;
-    if (filters.tipo && p.tipo !== filters.tipo) return false;
-    if (filters.query) {
-      const q = filters.query.toLowerCase();
-      return (
-        p.nombre.toLowerCase().includes(q) ||
-        p.equipo.toLowerCase().includes(q) ||
-        p.liga.toLowerCase().includes(q) ||
-        p.tipo.toLowerCase().includes(q)
-      );
-    }
-    return true;
-  });
-}
+
