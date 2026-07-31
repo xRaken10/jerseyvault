@@ -1,0 +1,23 @@
+{
+  "rewrites": [
+    {
+      "source": "/img-proxy/:path*",
+      "destination": "https://photo.yupoo.com/:path*"
+    },
+    {
+      "source": "/((?!img-proxy).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/img-proxy/(.*)",
+      "headers": [
+        {
+          "key": "Referer",
+          "value": "https://x.yupoo.com/"
+        }
+      ]
+    }
+  ]
+}

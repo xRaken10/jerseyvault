@@ -1,0 +1,13 @@
+[[redirects]]
+  from = "/img-proxy/*"
+  to = "https://photo.yupoo.com/:splat"
+  status = 200
+  force = true
+
+  [redirects.headers]
+    Referer = "https://x.yupoo.com/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
