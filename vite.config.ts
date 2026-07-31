@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  // @ts-expect-error - Known issue with TS excessive stack depth comparing plugin types
   plugins: [react(), tailwindcss()],
 
   server: {
